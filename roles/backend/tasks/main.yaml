@@ -53,7 +53,7 @@
 - name: daemon reload
   tags:
   - deployment
-  ansible.builtin.system_service:
+  ansible.builtin.systemd_service:
     daemon_reload: true
     state: restarted
     name: backend
