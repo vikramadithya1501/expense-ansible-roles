@@ -15,11 +15,10 @@
 - name: create expense user
   ansible.builtin.user:
     name: expense
-
 - name: import tasks from common role
   tags:
   - deployment
-  ansible.builtin.common_role:
+  ansible.builtin.import_role:
     name: common
     tasks_from: app-pre-req
 
