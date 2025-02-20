@@ -19,7 +19,7 @@
 - name: import tasks from common role
   tags:
   - deployment
-  ansible.builtin.commom_role:
+  ansible.builtin.common_role:
     name: common
     tasks_from: app-pre-req
 
