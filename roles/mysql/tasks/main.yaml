@@ -18,10 +18,11 @@
 - name: connect mysql server
   community.mysql.mysql_info:
     login_user: root
-    login_host: "{{ login_host }}"
     login_password: "{{ mysql_root_password }}"
+    login_host: "{{ login_host }}"
   ignore_errors: true
-  Register: mysql_info
+  register: mysql_info
+
 
 - name: print mysql info
   ansible.builtin.debug:
